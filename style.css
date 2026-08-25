@@ -53,28 +53,31 @@ body {
     align-items: center;
 }
 
+.navbar__4{
+    display: none;
+}
+
 /* My learing popup */
 
-.mylearning
-{
-position: relative;
-cursor: pointer;
+.mylearning {
+    position: relative;
+    cursor: pointer;
 
 }
 
-.mylearing__popup{
-position: absolute;
-background-color: white;
-border: solid black 1px;
-width: 100px;
-top: 150%;
-padding: 20px;
-right: 0;
-display: none;
+.mylearing__popup {
+    position: absolute;
+    background-color: white;
+    border: solid black 1px;
+    width: 100px;
+    top: 150%;
+    padding: 20px;
+    right: 0;
+    display: none;
 }
 
 
-.mylearning:hover .mylearing__popup{
+.mylearning:hover .mylearing__popup {
     display: block;
 }
 
@@ -94,11 +97,11 @@ display: none;
     border-radius: 20px;
 }
 
-.sale-image{
+.sale-image {
     position: relative;
 }
 
-.sale-image__offer{
+.sale-image__offer {
     width: 30%;
     background-color: white;
     border: solid black 3px;
@@ -128,14 +131,16 @@ display: none;
 }
 
 .course-card {
-    width: 350px;
+    flex-grow: 1;
+    flex-basis: 20%;
+    margin: 5px;
 }
 
 .course-card img {
     width: 100%;
 }
 
-.topics__container{
+.topics__container {
     display: flex;
     gap: 10px;
     margin-top: 10px;
@@ -143,18 +148,18 @@ display: none;
 
 }
 
-.topics__container p{
+.topics__container p {
     border: solid gray 1px;
     padding: 10px;
     flex-grow: 1;
     flex-basis: 25%;
 }
 
-.popular{
+.popular {
     padding: 10px;
 }
 
-.popular__container img{
+.popular__container img {
     width: 100%;
     height: 60%;
 }
@@ -166,24 +171,59 @@ display: none;
     flex-wrap: wrap;
 }
 
-.footer{
+.footer {
     background-color: black;
     color: white;
     padding: 30px;
 }
 
-.footer__one{
+.footer__one {
     gap: 10px;
     display: flex;
 }
 
-.footer__one p{
+.footer__one p {
     margin: 20px;
 }
 
-.footer__two{
-   margin: 20px;
-   display: flex;
-   justify-content: space-between;
+.footer__two {
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
 }
 
+/* Media Quaries */
+
+@media screen and (max-width:800px) {
+    body {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .course-card {
+        flex-basis: 40%;
+        margin: 5px;
+    }
+
+    .Catagories {
+        display: none;
+    }
+.navbar__s2 {
+        flex-basis: 40%;
+        justify-content: space-between;
+}
+
+    .navbar__s3 {
+        display: none;   
+    }
+
+    .navbar__4{
+       display: block;
+    }
+
+    .sale-image__offer{
+    top: 20px;
+    left: 50px;
+    }
+}
